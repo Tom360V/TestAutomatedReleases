@@ -7,11 +7,14 @@ compiler:
 script:
   - gcc main.c -o test.exe
 
+before_deploy:
+  - ls -al
+
 deploy:
   provider: releases
   api_key: $TESTAUTOMATEDRELEASE_GITHUB
   file_glob: true
-  file: bin/Release/test.exe
+  file: test.exe
   skip_cleanup: true
   overwrite: true
   on:
