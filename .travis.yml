@@ -9,7 +9,7 @@ script:
 
 deploy:
   provider: releases
-  api_key: TESTAUTOMATEDRELEASE_GITHUB
+  api_key: "TESTAUTOMATEDRELEASE_GITHUB"
   file_glob: true
   file: bin/Release/test.exe
   skip_cleanup: true
